@@ -8,8 +8,7 @@ Author: Julien Maury
 Author URI: http://tweetpressfr.github.io
 Text Domain: jm-wpcb
 Domain Path: /languages
-*/
-/*
+
 License: GPL v3
 
 JM WP Cookie Bar

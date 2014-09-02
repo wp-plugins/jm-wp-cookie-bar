@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 defined('ABSPATH') or die('No direct load!');
 
-define( 'WPCB_VERSION', '1.0' );
+define( 'WPCB_VERSION', '1.1' );
 define( 'WPCB_DIR', plugin_dir_path( __FILE__ )  );
 define( 'WPCB_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPCB_INC_DIR', trailingslashit( WPCB_DIR . 'inc') );

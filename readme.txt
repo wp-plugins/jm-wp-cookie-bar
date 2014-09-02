@@ -1,5 +1,5 @@
 === JM WP Cookie Bar ===
-Contributors: tweetpressfr
+Contributors: jmlapam
 Tags: cookie, bar, policy
 Tested up to: 4.0
 Requires at least: 3.1.0

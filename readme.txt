@@ -17,7 +17,7 @@ It is now mandatory to display a warning message to your visitors to let them kn
 
 <a href="http://twitter.com/intent/user?screen_name=tweetpressfr">Follow me on Twitter</a>
 
-Special thanks <a href="http://twitter.com/intent/user?screen_name=grafikart">@grafikart</a> who inspired me this plugin. 
+Special thanks <a href="http://twitter.com/intent/user?screen_name=grafikart_fr">@grafikart_fr</a> who inspired me this plugin. 
 
 
 == Installation ==

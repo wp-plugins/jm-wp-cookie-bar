@@ -15,44 +15,34 @@ function _wpcb_scripts() {
 	if( $opts['cookieBarStyle'] == 'yes' )
 		wp_enqueue_style( 'wp-cookiebar-style' );
 	
-	wp_enqueue_script( 'wp-cookiebar-tags', WPCB_JS_URL.'jquery.cookiebar.js', array('jquery'), null, false);
+	wp_enqueue_script( 'wp-cookiebar-lib', WPCB_JS_URL.'jquery.cookiebar.js', array('jquery'), null, true);
+	wp_enqueue_script( 'wp-cookiebar', WPCB_JS_URL.'cookiebar.js', array( 'wp-cookiebar-lib' ), null, true );
+	
+	// support SSL
+	$is_ssl = is_ssl() ? 'https://' : 'http://';
 
-}
-
-add_action( 'wp_footer', '_wpcb_add_cookiebar');
-function _wpcb_add_cookiebar(){
-
+	//data to be passed
 	$opts  = get_option('jm_wpcb');
 	$class = sanitize_html_class($opts['closeClass']);
-	$text  = esc_textarea(strip_tags($opts['cookieBarText']));
-	$last  = (int) $opts['cookieBarExpire'];
+	$mess = esc_textarea(strip_tags($opts['cookieBarText']));
+	$expire  = (int) $opts['cookieBarExpire'];
 	$posi  = $opts['cookieBarPosition'];
-	$url   = esc_url($opts['cookieRulesUrl']);
+	$linkRules = esc_url($opts['cookieRulesUrl']);
 
-	$script = '
-		<script>
-			(function( $ ){
-				// cookies
-			    $(document).ready(function(){
-			    	if( $.cookie("cookiebar") === undefined ){
 
-			    		$( ".wpcb-cookie-bar" ).append( "<div id=\"cookie-message\" class=\"cookie-message\">'.$text.' <a id=\"cookie-rules\" class=\"cookie-rules\" href=\"'.$url.'\">'.__('Read more', 'jm-wpcb').'</a><div id=\"cookie-btn\" class=\"'.$class.'\">Ok</div></div>" );
-			    		$( "#cookie-message" ).css( "'.$posi.'", "0"  );
+	$args = array( 
+		'ajaxurl' => admin_url( 'admin-ajax.php', $is_ssl ),
+     	'_wpcb_ajax_nonce' => wp_create_nonce('_wpcb_ajax'),
+     	'closeClass' => $class,
+     	'mess' => $mess,
+     	'expire' => $expire,
+     	'posi' => $posi,
+     	'linkRules' => $linkRules,
+     	'textlinkRules' => __('Read more', 'jm-wpcb')
+     );
 
-			    		$( "#cookie-btn" ).click( function(e){
-			    			e.preventDefault();
-			    			$( "#cookie-message" ).fadeOut();
-			    			$.cookie("cookiebar", "viewed", { expires: '.$last.' } );
-			    		});
-					}
-			    });
-			})(jQuery);
-	  	</script>
-	  	';
+	wp_localize_script( 'wp-cookiebar', '_wpcb_ajax_obj', $args );
 
-	 if ( wp_script_is( 'wp-cookiebar-tags', 'done' ) ) 
-	 	echo $script;
- 
 }
 
 

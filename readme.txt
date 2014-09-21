@@ -1,5 +1,5 @@
 === JM WP Cookie Bar ===
-Contributors: jmlapam
+Contributors: tweetpressfr
 Tags: cookie, bar, policy
 Tested up to: 4.0
 Requires at least: 3.1.0
@@ -17,14 +17,12 @@ It is now mandatory to display a warning message to your visitors to let them kn
 
 <a href="http://twitter.com/intent/user?screen_name=tweetpressfr">Follow me on Twitter</a>
 
-Special thanks <a href="http://twitter.com/intent/user?screen_name=grafikart_fr">@grafikart_fr</a> who inspired me this plugin. 
-
 
 == Installation ==
 
 1. Upload plugin files to the /wp-content/plugins/ directory
 2. Activate the plugin through the Plugins menu in WordPress
-3. Go to Admin > Tool > Cookie Bar anb set your cookie bar !
+3. Go to Tool > Cookie Bar in admin panel to set your cookie bar !
 
 == Frequently asked questions ==
 
@@ -41,7 +39,15 @@ You can even deactivate basic style and style it entirely in your main styleshee
 
 == Changelog ==
 
+# 1.2
+* 21 Sep 2014
+* change wp_footer hook for appropriate hook wp_enqueue_script and use wp_localize_script() to pass vars on js
+* Better performance with scripts in footer
+
 # 1.1
-* 02 Sep 2014
+* 31 Aug 2014
 * Fix translation and make cookie bar design "unstyled"
+
+# 1.0
+* 29  Aug 2014
 * Initial commit

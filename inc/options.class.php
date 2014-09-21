@@ -123,17 +123,17 @@ if( !class_exists('WPCB_Tool_Page') ) {
             return $new;
 
             if ( isset($options['closeClass']) )
-                $new['closeClass']     = sanitize_html_class( $options['closeClass'] );
+                $new['closeClass']          = sanitize_html_class( $options['closeClass'] );
             if ( isset($options['cookieBarExpire']) )
-                $new['cookieBarExpire']   = (int) $options['cookieBarExpire'];
+                $new['cookieBarExpire']     = (int) $options['cookieBarExpire'];
             if ( isset($options['cookieBarText']) )
-                $new['cookieBarText']  = esc_attr(strip_tags( $options['cookieBarText'] ));
+                $new['cookieBarText']       = esc_attr(strip_tags( $options['cookieBarText'] ));
             if ( isset($options['cookieRulesUrl']) )
-                $new['cookieRulesUrl']  = esc_url( $options['cookieRulesUrl'] );
+                $new['cookieRulesUrl']      = esc_url( $options['cookieRulesUrl'] );
             if ( isset($options['cookieBarPosition']) )
-                $new['cookieBarPosition']  = $options['cookieBarPosition'];
+                $new['cookieBarPosition']   = $options['cookieBarPosition'];
             if ( isset($options['cookieBarStyle']) )
-                $new['cookieBarStyle']     = $options['cookieBarStyle'];
+                $new['cookieBarStyle']      = $options['cookieBarStyle'];
             
             return $new;
         }

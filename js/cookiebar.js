@@ -4,8 +4,6 @@
     $(document).ready(function(){
 
 		var data = {
-			action: '_wpcb_add_cookiebar',
-			_wpcb_ajax_nonce: _wpcb_ajax_obj._wpcb_ajax_nonce,
 			closeClass: _wpcb_ajax_obj.closeClass,
 			mess: _wpcb_ajax_obj.mess,
 			expire: _wpcb_ajax_obj.expire,

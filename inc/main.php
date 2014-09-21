@@ -31,8 +31,6 @@ function _wpcb_scripts() {
 
 
 	$args = array( 
-		'ajaxurl' => admin_url( 'admin-ajax.php', $is_ssl ),
-     	'_wpcb_ajax_nonce' => wp_create_nonce('_wpcb_ajax'),
      	'closeClass' => $class,
      	'mess' => $mess,
      	'expire' => $expire,

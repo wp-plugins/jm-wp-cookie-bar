@@ -3,7 +3,7 @@
 Plugin Name: JM WP Cookie Bar
 Plugin URI: http://tweetpress.fr
 Description: Because it's mandatory! You have to warn you users you use cookies for example with Google Analytics
-Version: 1.2
+Version: 1.3
 Author: Julien Maury
 Author URI: http://tweetpressfr.github.io
 Text Domain: jm-wpcb
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 defined('ABSPATH') or die('No direct load!');
 
-define( 'WPCB_VERSION', '1.2' );
+define( 'WPCB_VERSION', '1.3' );
 define( 'WPCB_DIR', plugin_dir_path( __FILE__ )  );
 define( 'WPCB_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPCB_INC_DIR', trailingslashit( WPCB_DIR . 'inc') );
@@ -61,7 +61,7 @@ function _wpcb_init() {
 function _wpcb_get_default_options() {
     return array(
     'closeClass'     => 'wpcb-close-btn',
-    'cookieBarPosition' => 'top',
+    'cookieBarPosition' => 'bottom',
     'cookieBarStyle' => 'yes',
     'cookieRulesUrl' => '',
     'cookieBarText'  => __('Cookies help us deliver our services. By using our services, you agree to our use of cookies.', 'jm-wpcb'),

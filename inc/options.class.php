@@ -150,7 +150,7 @@ if( !class_exists('WPCB_Tool_Page') ) {
         {
             return array(
             'closeClass' => 'wpcb-close-btn',
-            'cookieBarPosition' => 'top',
+            'cookieBarPosition' => 'bottom',
             'cookieBarStyle' => 'yes',
             'cookieRulesUrl' => '',
             'cookieBarText' => __('Cookies help us deliver our services. By using our services, you agree to our use of cookies.', $this->textdomain),

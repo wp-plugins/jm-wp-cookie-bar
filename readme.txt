@@ -39,6 +39,10 @@ You can even deactivate basic style and style it entirely in your main styleshee
 
 == Changelog ==
 
+# 1.3
+* 18 Oct 2014
+*  fix responive and z-index
+
 # 1.2
 * 21 Sep 2014
 * change wp_footer hook for appropriate hook wp_enqueue_script and use wp_localize_script() to pass vars on js

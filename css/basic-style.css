@@ -2,12 +2,11 @@
   position:fixed;
   left:0;right:0;
   color:#222;
-  height: 29px;
-  padding: .3em;
+  padding: 1em .7em;
   background-color: #eee;
   font-size: 13px;
   min-width: 0;
-  z-index: 9999;
+  z-index: 100000;
 }
 
 .cookie-message a {
@@ -26,7 +25,6 @@
 
 .wpcb-close-btn {
   display:inline;
-  height: 28px;
   border-color: #167ac6;
   background: #167ac6;
   color: #fff;
@@ -53,3 +51,5 @@
 .cookie-rules:hover{
   text-decoration: none;
 }
+
+

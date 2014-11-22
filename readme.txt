@@ -1,7 +1,7 @@
 === JM WP Cookie Bar ===
 Contributors: jmlapam
 Tags: cookie, bar, policy
-Tested up to: 4.0
+Tested up to: 4.0.1
 Requires at least: 3.1.0
 License: GPLv2 or later
 Stable tag: trunk
@@ -39,9 +39,14 @@ You can even deactivate basic style and style it entirely in your main styleshee
 
 == Changelog ==
 
+# 1.4
+* 22 Nov 2014
+* better init
+* No more code duplication
+
 # 1.3
 * 18 Oct 2014
-*  fix responive and z-index
+* fix responive and z-index
 
 # 1.2
 * 21 Sep 2014

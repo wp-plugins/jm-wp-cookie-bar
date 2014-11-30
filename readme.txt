@@ -39,6 +39,10 @@ You can even deactivate basic style and style it entirely in your main styleshee
 
 == Changelog ==
 
+# 1.5
+* 30 Nov 2014
+* Fix stupid fatal on activation due to wrong method call in init class
+
 # 1.4
 * 22 Nov 2014
 * better init

@@ -34,7 +34,7 @@ if( ! class_exists('WPCB_Init') )
 			$opts = get_option( 'jm_wpcb' );
 
 			if ( !is_array($opts) )
-				update_option( 'jm_wpcb', WPCB_Tool_Page::default_options() );
+				update_option( 'jm_wpcb', self::get_default_options() );
 		}
 
 		//

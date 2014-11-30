@@ -3,7 +3,7 @@
 Plugin Name: JM WP Cookie Bar
 Plugin URI: http://tweetpress.fr
 Description: Because it's mandatory! You have to warn you users you use cookies for example with Google Analytics
-Version: 1.4
+Version: 1.5
 Author: Julien Maury
 Author URI: http://tweetpressfr.github.io
 Text Domain: jm-wpcb
@@ -32,12 +32,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 defined('ABSPATH') or die('No direct load!');
 
-define( 'WPCB_VERSION', '1.4' );
+define( 'WPCB_VERSION', '1.5' );
 define( 'WPCB_DIR', plugin_dir_path( __FILE__ )  );
 define( 'WPCB_URL', plugin_dir_url( __FILE__ ) );
-define( 'WPCB_CSS_URL', WPCB_URL. 'css/' );
-define( 'WPCB_JS_URL', WPCB_URL. 'js/' );
-define( 'WPCB_IMG_URL', WPCB_URL. '/img/' );
+define( 'WPCB_CSS_URL', WPCB_URL. 'assets/css/' );
+define( 'WPCB_JS_URL', WPCB_URL. 'assets/js/' );
+define( 'WPCB_IMG_URL', WPCB_URL. 'assets/img/' );
 define( 'WPCB_SLUG', 'jm-wpcb' );
 define( 'WPCB_LANG_DIR', dirname( plugin_basename(__FILE__) ) . '/languages/');
 
@@ -49,11 +49,11 @@ define( 'WPCB_LANG_DIR', dirname( plugin_basename(__FILE__) ) . '/languages/');
 //Call modules
 if( is_admin() ) {
 
-	require( WPCB_DIR.'/inc/options.class.php' ); 
-	require( WPCB_DIR.'/inc/init.class.php' );
+	require( WPCB_DIR.'/classes/options.class.php' ); 
+	require( WPCB_DIR.'/classes/init.class.php' );
 } 
 
-require( WPCB_DIR.'/inc/main.php' );  
+require( WPCB_DIR.'/classes/main.php' );  
 
 // Early init
 add_action('plugins_loaded','_wpcb_early_init');
